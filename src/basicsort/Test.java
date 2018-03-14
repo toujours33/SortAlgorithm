@@ -2,60 +2,55 @@ package basicsort;
 
 import cst.wyz.utils.ArrayOperation;
 
-public class Test {
+public class Test<T extends Comparable<T>> {
+	
+	public void test(T [] t) {
+		ArrayOperation<T> util = new ArrayOperation<>();
 
-	public static void main(String[] args) {
+		util.printArray(util.arrayCopy(t), "未排序数组");
 
-		ArrayOperation<Integer> intUtil = new ArrayOperation<>();
-		ArrayOperation<Character> charUtil = new ArrayOperation<>();
-
-		// Integer[] test = new Integer[] { 1, 3, 2, 4, 6, 5, 8, 7, 2, 1, 0 };
-		Integer[] test = new Integer[] { 6, 5, 3, 1, 8, 7, 2, 4 };
-		intUtil.printArray(intUtil.arrayCopy(test), "未排序数组");
-
-		BubbleSort<Integer> bubbleSort = new BubbleSort<>();
-		Integer[] copy02 = intUtil.arrayCopy(test);
+		BubbleSort<T> bubbleSort = new BubbleSort<>();
+		T[] copy02 = util.arrayCopy(t);
 		bubbleSort.sort(copy02);
-		intUtil.printArray(copy02, "冒泡排序：");
+		util.printArray(copy02, "冒泡排序：");
 
-		SelectionSort<Integer> selectionSort = new SelectionSort<>();
-		Integer[] copy01 = intUtil.arrayCopy(test);
+		SelectionSort<T> selectionSort = new SelectionSort<>();
+		T[] copy01 = util.arrayCopy(t);
 		selectionSort.sort(copy01);
-		intUtil.printArray(copy01, "选择排序：");
+		util.printArray(copy01, "选择排序：");
 
-		InsertionSort<Integer> insertionSort = new InsertionSort<>();
-		Integer[] copy03 = intUtil.arrayCopy(test);
+		InsertionSort<T> insertionSort = new InsertionSort<>();
+		T[] copy03 = util.arrayCopy(t);
 		insertionSort.sort(copy03);
-		intUtil.printArray(copy03, "插入排序：");
+		util.printArray(copy03, "插入排序：");
 
-		ShellSort<Integer> shellSort = new ShellSort<>();
-		Integer[] copy04 = intUtil.arrayCopy(test);
+		ShellSort<T> shellSort = new ShellSort<>();
+		T[] copy04 = util.arrayCopy(t);
 		shellSort.sort(copy04);
-		intUtil.printArray(copy04, "希尔排序");
+		util.printArray(copy04, "希尔排序");
 
-		MergeSort<Integer> mergeSort = new MergeSort<>();
-		Integer[] copy05 = intUtil.arrayCopy(test);
+		MergeSort<T> mergeSort = new MergeSort<>();
+		T[] copy05 = util.arrayCopy(t);
 		mergeSort.sort(copy05);
-		intUtil.printArray(copy05, "归并排序；");
+		util.printArray(copy05, "归并排序；");
 
-		QuickSort<Integer> quickSort = new QuickSort<>(new QuickSortOneWay<Integer>());
-		Integer[] copy06 = intUtil.arrayCopy(test);
+		QuickSort<T> quickSort = new QuickSort<>(new QuickSortOneWay<T>());
+		T[] copy06 = util.arrayCopy(t);
 		quickSort.sort(copy06);
-		intUtil.printArray(copy06, "单向快速排序：");
+		util.printArray(copy06, "单向快速排序：");
 
-		QuickSort<Integer> quickSort2 = new QuickSort<>(new QuickSortTwoWay<Integer>());
-		Integer[] copy07 = intUtil.arrayCopy(test);
+		QuickSort<T> quickSort2 = new QuickSort<>(new QuickSortTwoWay<T>());
+		T[] copy07 = util.arrayCopy(t);
 		quickSort2.sort(copy07);
-		intUtil.printArray(copy07, "双向快速排序：");
+		util.printArray(copy07, "双向快速排序：");
 		
-		Character[] charTest = new Character[] {'v','a','r','b','h','q','p','l','d'};
-		charUtil.printArray(charTest, "未排序字符数组：");
+		HeapSort<T> heapSort = new HeapSort<>();
+		T[] copy08 = util.arrayCopy(t);
+		heapSort.sort(copy08);
+		util.printArray(copy08, "堆排序：");
 		
-		QuickSort<Character> quickSort3 = new QuickSort<>(new QuickSortOneWay<Character>());
-		Character[] copy08 = charUtil.arrayCopy(charTest);
-		quickSort3.sort(copy08);
-		charUtil.printArray(copy08, "单向快速排序字符数组：");
 		
 	}
+
 
 }
