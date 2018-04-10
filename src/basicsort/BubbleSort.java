@@ -3,12 +3,12 @@ package basicsort;
 import cst.wyz.utils.ArrayOperation;
 
 /**
- * Ã°ÅİÅÅĞò£¬Ê±¼ä¸´ÔÓ¶ÈO(n^2),¿Õ¼ä¸´ÔÓ¶ÈO(1)
+ * å†’æ³¡æ’åºï¼Œæ—¶é—´å¤æ‚åº¦O(n^2),ç©ºé—´å¤æ‚åº¦O(1)
  * 
  * @author Jerry
  *
  * @param <T>
- *            ÊµÏÖ Comparable ½Ó¿Ú£¬ÔÚÅÅĞòÖĞ²ÉÓÃ compareTo ·½·¨
+ *            å®ç° Comparable æ¥å£ï¼Œåœ¨æ’åºä¸­é‡‡ç”¨ compareTo æ–¹æ³•
  */
 public class BubbleSort<T extends Comparable<T>> {
 

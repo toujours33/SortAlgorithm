@@ -7,47 +7,47 @@ public class Test<T extends Comparable<T>> {
 	public void test(T [] t) {
 		ArrayOperation<T> util = new ArrayOperation<>();
 
-		util.printArray(util.arrayCopy(t), "Î´ÅÅĞòÊı×é");
+		util.printArray(util.arrayCopy(t), "æœªæ’åºæ•°ç»„");
 
 		BubbleSort<T> bubbleSort = new BubbleSort<>();
 		T[] copy02 = util.arrayCopy(t);
 		bubbleSort.sort(copy02);
-		util.printArray(copy02, "Ã°ÅİÅÅĞò£º");
+		util.printArray(copy02, "å†’æ³¡æ’åºï¼š");
 
 		SelectionSort<T> selectionSort = new SelectionSort<>();
 		T[] copy01 = util.arrayCopy(t);
 		selectionSort.sort(copy01);
-		util.printArray(copy01, "Ñ¡ÔñÅÅĞò£º");
+		util.printArray(copy01, "é€‰æ‹©æ’åºï¼š");
 
 		InsertionSort<T> insertionSort = new InsertionSort<>();
 		T[] copy03 = util.arrayCopy(t);
 		insertionSort.sort(copy03);
-		util.printArray(copy03, "²åÈëÅÅĞò£º");
+		util.printArray(copy03, "æ’å…¥æ’åºï¼š");
 
 		ShellSort<T> shellSort = new ShellSort<>();
 		T[] copy04 = util.arrayCopy(t);
 		shellSort.sort(copy04);
-		util.printArray(copy04, "Ï£¶ûÅÅĞò");
+		util.printArray(copy04, "å¸Œå°”æ’åº");
 
 		MergeSort<T> mergeSort = new MergeSort<>();
 		T[] copy05 = util.arrayCopy(t);
 		mergeSort.sort(copy05);
-		util.printArray(copy05, "¹é²¢ÅÅĞò£»");
+		util.printArray(copy05, "å½’å¹¶æ’åºï¼›");
 
 		QuickSort<T> quickSort = new QuickSort<>(new QuickSortOneWay<T>());
 		T[] copy06 = util.arrayCopy(t);
 		quickSort.sort(copy06);
-		util.printArray(copy06, "µ¥Ïò¿ìËÙÅÅĞò£º");
+		util.printArray(copy06, "å•å‘å¿«é€Ÿæ’åºï¼š");
 
 		QuickSort<T> quickSort2 = new QuickSort<>(new QuickSortTwoWay<T>());
 		T[] copy07 = util.arrayCopy(t);
 		quickSort2.sort(copy07);
-		util.printArray(copy07, "Ë«Ïò¿ìËÙÅÅĞò£º");
+		util.printArray(copy07, "åŒå‘å¿«é€Ÿæ’åºï¼š");
 		
 		HeapSort<T> heapSort = new HeapSort<>();
 		T[] copy08 = util.arrayCopy(t);
 		heapSort.sort(copy08);
-		util.printArray(copy08, "¶ÑÅÅĞò£º");
+		util.printArray(copy08, "å †æ’åºï¼š");
 		
 		
 	}
